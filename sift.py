@@ -525,6 +525,8 @@ if __name__ == '__main__':
     new_image[: image_row, : image_col] = image
     new_image[: image_t_row, col: col + image_t_col] = image_t
 
+    new_image = new_image.astype(np.uint8)
+
     plt.imshow(new_image, cmap = 'gray')
 
     paint = []
